@@ -1,0 +1,139 @@
+stalola@lx2-fuxi093:~/Documents/courses/OhTe/ot_viikko1$ git log --stat | cat
+commit 8c43485f1f8a6949a26b99eb69f7cfdc6b435a94
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sun Mar 19 00:52:04 2023 +0200
+
+    poista tiedosto file1 ja uudelleennimeä tiedosto file2 tiedostoksi file22
+    
+    tällä kertaa ohjeiden mukaan
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 558eed4639c27e5ded39d0e2ce9e24026b699e01
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sun Mar 19 00:47:43 2023 +0200
+
+    palautetaan edelliset muutokset
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit aeeedbb25cdfdabb10943082d24256de79aa0642
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sun Mar 19 00:34:24 2023 +0200
+
+    poista tiedosto file1 ja uudelleennimeä tiedosto file2 tiedostoksi file22
+    
+    ei mennyt täysin ohjeiden mukaan
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit c112c24c9b08d719a8844dc45554615ef46c6585
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sat Mar 18 22:44:14 2023 +0200
+
+    lisää kansio tiedostoja ja sen tiedostot
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit ff70efe4197339e5d0d27c58721393017d3e8ca1
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sat Mar 18 22:06:31 2023 +0200
+
+    eka ja kolmas lisäystä ja poistoa
+
+ eka.txt    | 4 ++--
+ kolmas.txt | 4 +++-
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+
+commit 74f8e2fa0616bc470de8bde2d28f85b67a2a7c3b
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sat Mar 18 22:01:53 2023 +0200
+
+    uudelleennimeä tiedosto -> eka
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 7c4895af1fb3133d5fd59a59b6ced81427298d9b
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sat Mar 18 22:00:22 2023 +0200
+
+    poista toinen
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit c27f0f819b978f326ed250b5f59285c1db9ec85a
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sat Mar 18 21:56:08 2023 +0200
+
+    lisäys ja poisto tiedostoon
+
+ tiedosto.txt | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit f378c3690c76a937d3186332c9a8e81515d35b73
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sat Mar 18 21:53:49 2023 +0200
+
+    lipsumin lisäys tiedostoon
+
+ tiedosto.txt | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+commit f16c4527ef5dd7c8bc63dbf0050705430117118d
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sat Mar 18 21:46:53 2023 +0200
+
+    added stuff
+
+ stuff/jokin-tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 6b19f3059d98bcb87fb440d7f695dca743854daf
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sat Mar 18 21:45:39 2023 +0200
+
+    kaksi muutosta
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 1647c58827097905dda47b95dcede18c9b1f8db0
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sat Mar 18 21:44:05 2023 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a85d63d547f3e1fdf1417a504b7b1c9d169d80e6
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sat Mar 18 21:40:07 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit db9aaf83abe78c52faa43ca1c6bf0871782e34ee
+Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
+Date:   Sat Mar 18 21:35:30 2023 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+stalola@lx2-fuxi093:~/Documents/courses/OhTe/ot_viikko1$ 
