@@ -1,4 +1,7 @@
+GITLOG
+
 stalola@lx2-fuxi093:~/Documents/courses/OhTe/ot_viikko1$ git log --stat | cat
+
 commit 8c43485f1f8a6949a26b99eb69f7cfdc6b435a94
 Author: Sanna Talola <48483040+stalola@users.noreply.github.com>
 Date:   Sun Mar 19 00:52:04 2023 +0200
