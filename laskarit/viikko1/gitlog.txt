@@ -140,3 +140,5 @@ Date:   Sat Mar 18 21:35:30 2023 +0200
  tiedosto.txt | 0
  1 file changed, 0 insertions(+), 0 deletions(-)
 stalola@lx2-fuxi093:~/Documents/courses/OhTe/ot_viikko1$ 
+
+*pieni muutos*
