@@ -4,6 +4,8 @@
 
 **Toukokuun puoliväliin** mennessä tästä reposta löytyy *harjoitustyö*.
 
+<sub>Toivottavasti.</sub>
+
 ### Viikko 1
 
 [gitlog.txt](https://github.com/stalola/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
