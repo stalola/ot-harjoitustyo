@@ -11,9 +11,9 @@ Kullakin pelaajalla on yksi **pelinappula**. Pelinappula sijaitsee aina **yhdess
 
 ```mermaid
 classDiagram
-Pelaaja "2..8" --> "1" Pelilauta
-Noppa "2" --> "1" Pelilauta
-Ruutu "40" --> "1" Pelilauta
-Pelaaja "1" --> "1" Pelinappula
-Pelinappula "1" --> "1" Ruutu
+Pelaaja "2..8" -- "1" Pelilauta
+Noppa "2" -- "1" Pelilauta
+Ruutu "40" -- "1" Pelilauta
+Pelaaja "1" -- "1" Pelinappula
+Pelinappula "1" -- "1" Ruutu
 ```
