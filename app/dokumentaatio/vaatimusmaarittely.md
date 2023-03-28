@@ -1,18 +1,24 @@
-# Vaatimusmäärittely
+# Vaatimusmäärittely (alustava)
 
 ## Sovelluksen tarkoitus
-eli pieni tekstuaalinen yleiskuvaus sovelluksesta
+Sää-äppi heille, jotka haluavat nähdä 1-2 paikkakunnan sään samalla kertaa, sekä SI- että yhdysvaltalaisina mittayksiköinä (etäsuhteessa olevien suosikki!)
 
 ## Käyttäjät 
 
-eli tieto erilaisista käyttäjärooleista, joita järjestelmässä on
-
-Tosin jos sovelluksessasi on vain yhdenlaisia käyttäjiä, ei kohtaa tarvita. Näin lienee tilanne monissa harjoitustöiden aiheissa kuten peleissä.
+Alkuvaiheessa ainoastaan yksi käyttäjätyyppi eli normaalikäyttäjä.
 
 ## Suunnitellut toiminnallisuudet
 
-Toiminnallisuudet voi kuvata ranskalaisina viivoina samaan tapaan kuin referenssiprojektissa
-Referenssiprojektissa on kuvattu perusversion eli jo “kurssin alkupuolella” toteutettavan ydintoiminnallisuuden toiminnallisuudet tarkemmin
-Perusversiota laajentavat jatkokehitysideat ovat omassa listassaan
+### Perusversio
 
-Voit myös tehdä referenssiprojektin tapaan **käyttöliittymäluonnoksen**, se ei ole kuitenkaan pakollinen.
+- käyttäjä voi valita haluamiensa kaupunkien tämänhetkiset/tuoreimmat säätiedot näkyviin
+- säätiedot esitetään sekä SI- että yhdysvaltalaisissa mittayksiköissä
+- esim. säätilan sanallinen kuvaus, lämpötila, "tuntuu kuin" lämpötila, ilmanpaine, ilmankosteus, näkyvyys, tuulen nopeus, auringonnousu ja -lasku
+
+### Jatkokehitysideoita
+
+- graafinen käyttöliittymä
+- käyttäjä voi itse valita, mitkä tiedot haluaa näkyville
+- suosikkien valinta ja tallennus
+- mahdollisuus tutkia myös sääennusteita
+- käyttäjälle voi lisätä henkilökohtaisen API keyn ja näin on mahdollista tehdä enemmän hakuja
