@@ -10,21 +10,10 @@ Pelilauta sisältää **40 ruutua**. Kukin ruutu tietää, mikä on sitä seuraa
 Kullakin pelaajalla on yksi **pelinappula**. Pelinappula sijaitsee aina **yhdessä ruudussa**.
 
 ```mermaid
- classDiagram
-      Pelaaja "*" --> "1" Pelilauta
-      class Pelaaja{
-      }
-      class Pelilauta{
-          ruutu
-      }
-      Pelaaja "1" --> "1" Pelinappula
-      class Pelinappula{
-
-      }
-      
-      class Noppa{
-          silmäluku
-      }
-
+classDiagram
+Pelaaja "2..8" --> "1" Pelilauta
+Noppa "2" --> "1" Pelilauta
+Ruutu "40" --> "1" Pelilauta
+Pelaaja "1" --> "1" Pelinappula
+Pelinappula "1" --> "1" Ruutu
 ```
-
