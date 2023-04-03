@@ -1,24 +1,11 @@
 # Ohjelmistotekniikka, kevät 2023
 
-## Harjoitustyö
+## Harjoitustyö: FOG app
+
+Perinteinen sääsovellus, jolla voit tarkistaa säätilan niin kotikaupungissasi kuin maapallon toisella puolen.
 
 ### Dokumentaatio
 
-[Työaikakirjanpito](https://github.com/stalola/ot-harjoitustyo/blob/main/app/dokumentaatio/tuntikirjanpito.md)
-
-[Vaatimusmäärittely](https://github.com/stalola/ot-harjoitustyo/blob/main/app/dokumentaatio/vaatimusmaarittely.md)
-
-## Harjoitukset
-
-### Viikko 2
-
-[Screenshot: coverage.png](https://github.com/stalola/ot-harjoitustyo/blob/main/laskarit/viikko2/coverage.png)
-
-[hakemisto: viikko2](https://github.com/stalola/ot-harjoitustyo/tree/main/laskarit/viikko2)
-
-### Viikko 1
-
-[gitlog.txt](https://github.com/stalola/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
-
-[komentorivi.txt](https://github.com/stalola/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
-
+- [Työaikakirjanpito](https://github.com/stalola/ot-harjoitustyo/blob/main/fog-app/dokumentaatio/tuntikirjanpito.md)
+- [Vaatimusmäärittely](https://github.com/stalola/ot-harjoitustyo/blob/main/fog-app/dokumentaatio/vaatimusmaarittely.md)
+- [Changelog](https://github.com/stalola/ot-harjoitustyo/blob/main/fog-app/dokumentaatio/changelog.md)
