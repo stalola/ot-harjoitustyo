@@ -9,8 +9,9 @@
 | 1.4. | 3    | toiminnallisuuden toteutus |
 | 2.4. | 1    | testauksen aloittaminen |
 | 6.4. | 2    | tutustumista tkinteriin |
-| 7.4. | 3.5    | tkinterin harjoittelua ja graafisen käyttöliittymän suunnittelua |
+| 7.4. | 3.5  | tkinterin harjoittelua ja graafisen käyttöliittymän suunnittelua |
 | 11.4. | 2    | pylintin käyttöönotto ja korjaukset |
 | 15.4. | 3    | graafisen käyttöliittymän toiminnallisuuksien aloitus |
 | 17.4. | 2    | linttausvirheiden ja importongelmien korjaaminen |
-| yht |   20.75  |  |
+| 18.4. | 1.25 | testien lisääminen ja virheiden korjaaminen |
+| yht |   22  |  |
