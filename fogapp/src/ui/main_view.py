@@ -1,9 +1,12 @@
 import tkinter as tk
 
+from .converter import Fog_ui
+
 window = tk.Tk()
 window.title("FOG weather")
-
 DEGREE_SIGN = "\N{DEGREE SIGN}"
+
+petteri = Fog_ui("emt")
 
 
 # header
@@ -53,7 +56,7 @@ frm_content = tk.Frame(master=window, bg="#ffe5de",
                        borderwidth=1, relief=tk.RAISED)
 lbl_city1 = tk.Label(
     master=frm_content,
-    text="Portland: ",
+    text=petteri.get_city(),
     fg="#505c68",
     bg="#ffe5de",
     height=2

@@ -2,27 +2,20 @@ import json
 import os
 
 
-class Weather:
-    def instructions():
-        # temporary solution until we'll start using API
-        print("Choose a city from the list by typing its name: ")
-        print("- Helsinki")
-        print("- London")
-        print("- Paris")
-#        print("Typing nothing will exit.")
+class FileAction:
 
-    def user_input():
+    def user_input(self):
         # temporary solution until we'll start using API
         print("")
         choice = input("Type here the name of the city: ")
-        if choice == "":
-            return False
+        if choice is None:
+            choice = "empty"
         filename = f"{choice.lower()}.json"
         return filename
 
     def access_data(self, filename):
         dirname = os.path.dirname(__file__)
-        data_file_path = os.path.join(dirname, "..", "data", filename)
+        data_file_path = os.path.join(dirname, "..", "..", "data", filename)
 
         with open(data_file_path, 'r', encoding="utf-8") as weather_file:
             filedata = weather_file.read()
