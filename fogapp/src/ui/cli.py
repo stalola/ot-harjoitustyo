@@ -1,4 +1,5 @@
 import datetime
+import sys
 
 from util.fileaction import FileAction
 from util.weatherdata import Weatherdata
@@ -9,10 +10,10 @@ class CLI():
         fog = FileAction()
         self.instructions()
         try:
-            self.weather = Weatherdata(fog.user_input())
+            self.weather = Weatherdata(fog.user_input_fromfile())
         except:
-            print("You did not type a valid city name -- Exit fogapp")
-            return
+            sys.exit("You did not type a valid city name -- Exit fogapp")
+
 
     def command_line_interface(self):
 

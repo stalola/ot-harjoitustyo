@@ -2,9 +2,9 @@ import datetime
 from util.fileaction import FileAction
 
 
-class Weatherdata:
-    def __init__(self, filename):
-        self.data = FileAction.access_data_fromfile(self, filename)
+class WeatherdataFromApi:
+    def __init__(self, url):
+        self.data = FileAction.access_data_w_api(self, url)
         self.city = self.data["name"]
         self.timestamp = self.data["dt"]
         self.timezone = self.data["timezone"]
