@@ -13,13 +13,17 @@ Perinteinen sääsovellus, jolla voit tarkistaa säätilan niin kotikaupungissas
 
 ## Asennus:
 
-1. Siirry hakemistoon ja asenna riippuvuudet komennolla:
+1. Siirry hakemistoon _fogapp_ ja asenna riippuvuudet komennolla:
 
 ```bash
 poetry install
 ```
+2. Käynnistä virtuaaliympäristö:
 
-2. Sovellus käynnistyy komennolla:
+```bash
+poetry shell
+```
+3. Sovellus käynnistyy komennolla:
 
 ```bash
 poetry run invoke start
