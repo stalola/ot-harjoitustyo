@@ -14,4 +14,6 @@
 | 15.4. | 3    | graafisen käyttöliittymän toiminnallisuuksien aloitus |
 | 17.4. | 2    | linttausvirheiden ja importongelmien korjaaminen |
 | 18.4. | 1.25 | testien lisääminen ja virheiden korjaaminen |
-| yht |   22  |  |
+| 24.4. | 2 | openweather apin käyttöönotto |
+| 25.4. | 2 | uusia testejä ja virheenkorjauksia |
+| yht |   26  |  |

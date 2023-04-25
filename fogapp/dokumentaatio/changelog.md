@@ -9,3 +9,7 @@
 - ensimmäinen versio graafisesta käyttöliittymästä: runko ilman toiminnallisuuksia
 - komentorivikäyttöliittymän uudelleenfaktorointi ja syötteen siistiminen
 - pylintin käyttöönotto ja virheiden korjaaminen
+
+# Viikko 5
+
+- WeatherAPIn käyttöönotto; toiminnallisuudesta ei tullut vielä valmista. Tarkoituksena, että käyttäjä voi hakea webistä ajantasaiset säätiedot, mutta ominaisuus ei vielä toimi.

@@ -11,7 +11,7 @@ Alkuvaiheessa ainoastaan yksi käyttäjätyyppi eli normaalikäyttäjä.
 
 ### Perusversio
 
-- [ ] käyttäjä voi valita haluamansa kaupungin tämänhetkiset/tuoreimmat säätiedot näkyviin
+- [x] käyttäjä voi valita haluamansa kaupungin tämänhetkiset/tuoreimmat säätiedot näkyviin
 - [X] kaupungin voi valita ennakkoon määritellyltä listalta
 - [X] säätiedot esitetään sekä SI- että yhdysvaltalaisissa mittayksiköissä
 - [X] säätilan sanallinen kuvaus, lämpötila, "tuntuu kuin" lämpötila, ilmanpaine, ilmankosteus, tuulen nopeus, auringonnousu ja -lasku
