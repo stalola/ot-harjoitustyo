@@ -12,12 +12,12 @@ class CLI():
         city_input = fog.user_input_w_api()
         self.weather = Weatherdata(city_input)
 
-
     def command_line_interface(self):
 
         print("")
 
-        print(f"City: {self.weather.city} \nTime: {self.weather.get_time('date')}")
+        print(
+            f"City: {self.weather.city} \nTime: {self.weather.get_time('date')}")
         print(f"Weather: {self.weather.get_weather('weather_group')} "
               f"({self.weather.get_weather('weather_description')}), "
               f"cloudiness: {self.weather.get_weather('clouds')} %\n")
@@ -40,14 +40,15 @@ class CLI():
         print("Typing the name of a city will show you the weather.")
         print("Typing nothing will exit.")
 
+    def get_local_time(self, timestamp):
+        timezone_shift = datetime.timezone(
+            datetime.timedelta(seconds=self.weather.timezone))
+        local_time = datetime.datetime.fromtimestamp(
+            timestamp, tz=timezone_shift)
+        return local_time.strftime("%H:%M")
+
     def sunrise(self):
-        sunrise_ts = datetime.datetime.fromtimestamp(
-            self.weather.get_time("sunrise_utc"))
-        sunrise_hours = sunrise_ts.strftime("%H:%M")
-        return sunrise_hours
+        return self.get_local_time(self.weather.get_time("sunrise_utc"))
 
     def sunset(self):
-        sunset_ts = datetime.datetime.fromtimestamp(
-            self.weather.get_time("sunset_utc"))
-        sunset_hours = sunset_ts.strftime("%H:%M")
-        return sunset_hours
+        return self.get_local_time(self.weather.get_time("sunset_utc"))
