@@ -1,10 +1,11 @@
 import datetime
-from util.fileaction import FileAction
+from util.filemanipulation import FileManipulation
 
 
 class Weatherdata:
-    def __init__(self, filename):
-        self.data = FileAction.access_data_fromfile(self, filename)
+    def __init__(self, city_input):
+        fog = FileManipulation()
+        self.data = fog.access_data_w_api(city_input)
         self.city = self.data["name"]
         self.timestamp = self.data["dt"]
         self.timezone = self.data["timezone"]

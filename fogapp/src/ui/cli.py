@@ -1,18 +1,16 @@
 import datetime
-import sys
+#import sys
 
-from util.fileaction import FileAction
+from util.filemanipulation import FileManipulation
 from util.weatherdata import Weatherdata
 
 
 class CLI():
     def __init__(self):
-        fog = FileAction()
+        fog = FileManipulation()
         self.instructions()
-        try:
-            self.weather = Weatherdata(fog.user_input_fromfile())
-        except:
-            sys.exit("You did not type a valid city name -- Exit fogapp")
+        city_input = fog.user_input_w_api()
+        self.weather = Weatherdata(city_input)
 
 
     def command_line_interface(self):
@@ -38,10 +36,8 @@ class CLI():
 #        print(f"{self.weather.timezone}")
 
     def instructions(self):
-        print("Choose a city from the list by typing its name: ")
-        print("- Helsinki")
-        print("- London")
-        print("- Paris")
+        print("\n\tFOG APP\n")
+        print("Typing the name of a city will show you the weather.")
         print("Typing nothing will exit.")
 
     def sunrise(self):
