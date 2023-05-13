@@ -1,15 +1,15 @@
 import datetime
 #import sys
 
-from util.filemanipulation import FileManipulation
+from util.apimanipulation import APIManipulation
 from util.weatherdata import Weatherdata
 
 
 class CLI():
     def __init__(self):
-        fog = FileManipulation()
+        fog = APIManipulation()
         self.instructions()
-        city_input = fog.user_input_w_api()
+        city_input = fog.user_input_city()
         self.weather = Weatherdata(city_input)
 
     def command_line_interface(self):
