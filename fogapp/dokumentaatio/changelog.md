@@ -25,3 +25,4 @@
 - uusi invoke-komento apikey, jotta käyttäjä voi lisätä oman API-avaimensa
 - uusien toiminnallisuuksien testaaminen
 - dokumentaation päivittäminen
+- komentorivikäyttöliittymän viilaaminen
