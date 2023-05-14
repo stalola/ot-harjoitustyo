@@ -16,4 +16,8 @@
 | 18.4. | 1.25 | testien lisääminen ja virheiden korjaaminen |
 | 24.4. | 2 | openweather apin käyttöönotto |
 | 25.4. | 2 | uusia testejä ja virheenkorjauksia |
-| yht |   26  |  |
+| 28.4. | 3 | APIin liittyvien ongelmien korjaamista |
+| 12.5. | 3 | luokkien välinen yhteistyö ja datan muoto oikeaksi |
+| 13.5. | 3 | docstringit, kellonajat paikalliseen aikaan, tuulen suunta |
+| 14.5. | 3 | käyttäjän oma api-key, dokumentaatio, palautuksen viimeistely |
+| yht |   38  |  |
