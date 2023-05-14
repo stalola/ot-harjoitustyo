@@ -5,6 +5,10 @@ def start(ctx):
     ctx.run("python3 src/index.py", pty=True)
 
 @task
+def test(ctx):
+    ctx.run("pytest src", pty=True)
+
+@task
 def coverage(ctx):
     ctx.run("coverage run --branch -m pytest", pty=True)
 
@@ -15,10 +19,6 @@ def coverage_report(ctx):
 @task
 def lint(ctx):
     ctx.run("pylint src", pty=True)
-
-@task
-def sandbox(ctx):
-    ctx.run("python3 src/sandbox.py", pty=True)
 
 @task
 def apikey(ctx):
