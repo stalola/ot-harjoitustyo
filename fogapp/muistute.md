@@ -1,1 +1,0 @@
-**HUOM:** src-hakemiston **alahakemistoissa** (ei siis itse src-hakemistossa) tulee olla tyhjät *__init__.py*-tiedostot, jotta mm. import-lauseet toimivat halutulla tavalla. 
