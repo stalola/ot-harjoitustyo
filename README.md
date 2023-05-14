@@ -10,6 +10,7 @@ Perinteinen sääsovellus, jolla voit tarkistaa säätilan niin kotikaupungissas
 - [Vaatimusmäärittely](https://github.com/stalola/ot-harjoitustyo/blob/main/fogapp/dokumentaatio/vaatimusmaarittely.md)
 - [Changelog](https://github.com/stalola/ot-harjoitustyo/blob/main/fogapp/dokumentaatio/changelog.md)
 - [Arkkitehtuuri](https://github.com/stalola/ot-harjoitustyo/blob/main/fogapp/dokumentaatio/arkkitehtuuri.md)
+- [Viikon 5 release](https://github.com/stalola/ot-harjoitustyo/releases/tag/viikko5)
 
 ## Asennus:
 
