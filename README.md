@@ -28,8 +28,19 @@ poetry shell
 ```bash
 poetry run invoke start
 ```
+4. Luo tunnus [OpenWeather-palveluun](https://home.openweathermap.org/users/sign_up) ja hanki itsellesi oma [API-avain](https://home.openweathermap.org/api_keys). *Jos olet ohte-kurssin arvioija etkä halua rekisteröityä palveluun, lähetä viesti niin annan avaimen!*
 
 ## Käyttö
+
+### API avaimen lisääminen:
+
+Sovellus ei toimi ennen kuin olet lisännyt API-avaimen. *Jos olet ohte-kurssin arvioija etkä halua rekisteröityä palveluun, lähetä viesti niin annan avaimen!*
+
+Uuden API-avaimen lisäys komennolla:
+
+```bash
+poetry run invoke apikey
+```
 
 ### Sovelluksen käynnistys:
 
