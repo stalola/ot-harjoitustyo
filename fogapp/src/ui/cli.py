@@ -1,6 +1,4 @@
 import datetime
-#import sys
-
 from util.apimanipulation import APIManipulation
 from util.weatherdata import Weatherdata
 
@@ -17,7 +15,7 @@ class CLI():
         print("")
 
         print(
-            f"City: {self.weather.city} \nTime: {self.weather.get_time('date')}")
+            f"City: {self.weather.city} \n")
         print(f"Weather: {self.weather.get_weather('weather_group')} "
               f"({self.weather.get_weather('weather_description')}), "
               f"cloudiness: {self.weather.get_weather('clouds')} %\n")
@@ -26,14 +24,14 @@ class CLI():
         print(f"Feels like: \t{self.weather.get_temperature('feels_like_cels')} C"
               f"\t{self.weather.get_temperature('feels_like_fahr')} F \t")
         print(f"Wind speed: {self.weather.get_wind('wind_speed_met')} met/sec "
-              f"{self.weather.get_wind('wind_speed_imp')} "
-              f"mph and direction: {self.weather.get_wind('wind_deg')} degrees")
+              f"{self.weather.get_wind('wind_speed_imp')} mph"
+              f" and direction: {self.weather.get_wind('wind_direction')}")
 
         print(
             f"Humidity: {self.weather.get_weather('humidity')} % and pressure: "
             f"{self.weather.get_weather('pressure')} hPa \n")
         print(f"Sunrise {self.sunrise()} and sunset {self.sunset()}")
-#        print(f"{self.weather.timezone}")
+        print(f"Weather data updated at: {self.weather.get_time('date')}")
 
     def instructions(self):
         print("\n\tFOG APP\n")

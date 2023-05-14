@@ -95,18 +95,51 @@ class Weatherdata:
 
         Args:
             name (str): toimii arvoilla "wind_speed_met", "wind_speed_imp", 
-            "wind_deg"
+            "wind_deg", "wind_direction"
 
         Returns:
             tuulennopeus metreinä sekunnissa, maileina tunnissa tai tuulen 
-            suunta asteina
+            suunta asteina tai pääilmansuuntana
         """
         wind_speed_met = self.data["wind"]["speed"]
         wind_speed_imp = round(wind_speed_met * 2.236936, 2)
         wind_deg = self.data["wind"]["deg"]
+        wind_direction = self.wind_degrees_to_cardinal(wind_deg)
 
         wind_values = {"wind_speed_met": wind_speed_met,
                        "wind_speed_imp": wind_speed_imp,
-                       "wind_deg": wind_deg
+                       "wind_deg": wind_deg,
+                       "wind_direction": wind_direction
                        }
         return wind_values.get(name, None)
+
+    def wind_degrees_to_cardinal(self, degrees):
+        cardinal_directions = {"north": [[348.75, 360], [0, 11.25]],
+                               "north-northeast": [11.25, 33.75],
+                               "northeast": [33.75, 56.25],
+                               "east-northeast": [56.25, 78.75],
+                               "east": [78.75, 101.25],
+                               "east-southeast": [101.25, 123.75],
+                               "southeast": [123.75, 146.25],
+                               "south-southeast": [146.25, 168.75],
+                               "south": [168.75, 191.25],
+                               "south-southwest": [191.25, 213.75],
+                               "southwest": [213.75, 236.25],
+                               "west-southwest": [236.25, 258.75],
+                               "west": [258.75, 281.25],
+                               "west-northwest": [281.25, 303.75],
+                               "northwest": [303.75, 326.25],
+                               "north-northwest": [326.25, 348.75],
+                              }
+
+        for cardinal_direction, values in cardinal_directions.items():
+            if isinstance(values[0], list):
+                for range_list in values:
+                    start, end = range_list
+                    if start <= degrees <= end:
+                        return cardinal_direction
+            else:
+                start, end = values
+                if start <= degrees <= end:
+                    return cardinal_direction
+        return None
