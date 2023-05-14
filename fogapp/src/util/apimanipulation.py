@@ -1,5 +1,4 @@
 import json
-import os
 import sys
 from configparser import ConfigParser, NoOptionError
 from urllib import parse, error, request
@@ -18,7 +17,6 @@ class APIManipulation:
         Returns:
             Merkkijono, joka on käyttäjän antama kaupungin nimi pienaakkosina.
         """
-        print("")
         choice = input("Type here the name of the city: ")
         if choice == "":
             sys.exit("You did not type anything -- Exit")
@@ -36,7 +34,7 @@ class APIManipulation:
         newapi = input("Type here the new api key (typing nothing will exit "
                        "without changes): ")
         if newapi == "":
-            sys.exit("API key was not changed, good bye")
+            sys.exit("Exiting.. API key was not changed.")
         with open("src/util/apikey.ini", "w", encoding="utf-8") as keyfile:
             keyfile.write(f"[openweather]\napi_key={newapi}")
         print(f"Avain {newapi} lisätty tiedostoon apikey.ini")
@@ -106,26 +104,3 @@ class APIManipulation:
             return weatherjson
         except json.JSONDecodeError:
             sys.exit("Couldn't read the server response.")
-
-    def user_input_fromfile(self):
-        # temporary solution until we'll start using API
-        """FOR TEST USE ONLY
-        """
-        print("")
-        choice = input("Type here the name of the city: ")
-        if choice is None:
-            choice = "empty"
-        filename = f"{choice.lower()}.json"
-        return filename
-
-    def access_data_fromfile(self, filename):
-        """FOR TEST USE ONLY
-        """
-        dirname = os.path.dirname(__file__)
-        data_file_path = os.path.join(dirname, "..", "..", "data", filename)
-
-        with open(data_file_path, 'r', encoding="utf-8") as weather_file:
-            filedata = weather_file.read()
-
-        data = json.loads(filedata)
-        return data

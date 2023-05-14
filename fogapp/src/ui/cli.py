@@ -1,4 +1,3 @@
-import datetime
 from util.apimanipulation import APIManipulation
 from util.weatherdata import Weatherdata
 
@@ -7,46 +6,38 @@ class CLI():
     def __init__(self):
         fog = APIManipulation()
         self.instructions()
+        print("")
         city_input = fog.user_input_city()
         self.weather = Weatherdata(city_input)
 
-    def command_line_interface(self):
+    def instructions(self):
+        print("\nFOG APP\n")
+        print("- Typing the name of a city will give you the weather")
+        print("- Typing nothing will exit")
 
+    def command_line_interface(self):
+        city = str(self.weather.city)
         print("")
 
         print(
-            f"City: {self.weather.city} \n")
-        print(f"Weather: {self.weather.get_weather('weather_group')} "
-              f"({self.weather.get_weather('weather_description')}), "
+            f"{city.upper()} \n")
+        print(f"Weather: {self.weather.get_weather('weather_description')}, "
               f"cloudiness: {self.weather.get_weather('clouds')} %\n")
         print(f"Temperature: \t{self.weather.get_temperature('temperature_cels')} C"
               f"\t{self.weather.get_temperature('temperature_fahr')} F ")
         print(f"Feels like: \t{self.weather.get_temperature('feels_like_cels')} C"
-              f"\t{self.weather.get_temperature('feels_like_fahr')} F \t")
+              f"\t{self.weather.get_temperature('feels_like_fahr')} F\n")
+
         print(f"Wind speed: {self.weather.get_wind('wind_speed_met')} met/sec "
-              f"{self.weather.get_wind('wind_speed_imp')} mph"
-              f" and direction: {self.weather.get_wind('wind_direction')}")
+              f"{self.weather.get_wind('wind_speed_imp')} mph\n"
+              f" and direction: {self.weather.get_wind('wind_direction')}\n")
 
         print(
             f"Humidity: {self.weather.get_weather('humidity')} % and pressure: "
             f"{self.weather.get_weather('pressure')} hPa \n")
-        print(f"Sunrise {self.sunrise()} and sunset {self.sunset()}")
-        print(f"Weather data updated at: {self.weather.get_time('date')}")
 
-    def instructions(self):
-        print("\n\tFOG APP\n")
-        print("Typing the name of a city will show you the weather.")
-        print("Typing nothing will exit.")
+        sunrise = self.weather.get_time("sunrise_local")
+        sunset = self.weather.get_time("sunset_local")
 
-    def get_local_time(self, timestamp):
-        timezone_shift = datetime.timezone(
-            datetime.timedelta(seconds=self.weather.timezone))
-        local_time = datetime.datetime.fromtimestamp(
-            timestamp, tz=timezone_shift)
-        return local_time.strftime("%H:%M")
-
-    def sunrise(self):
-        return self.get_local_time(self.weather.get_time("sunrise_utc"))
-
-    def sunset(self):
-        return self.get_local_time(self.weather.get_time("sunset_utc"))
+        print(f"Sun rises at {sunrise} and sets {sunset}")
+        print(f"Last weather update on {self.weather.get_time('date')}")

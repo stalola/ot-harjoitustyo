@@ -18,24 +18,48 @@ class Weatherdata:
         self.timestamp = self.data["dt"]
         self.timezone = self.data["timezone"]
 
+    def get_local_time(self, timestamp):
+        """Metodi, jonka avulla voi esittää kellonajan paikallista aikaa.
+
+        Aikaleima muutetaan paikalliseksi ajaksi käyttäen säädatan mukana olevaa
+        tietoa sekuntimääräisestä muutoksesta UTC-aikavyöhykkeeseen.
+
+        Args:
+            timestamp: Ajanhetki UTC-aikavyöhykkeen aikaleimana
+
+        Returns:
+            Kellonaika, jossa on otettu huomioon paikallinen aika.
+        """
+        timezone_shift = datetime.timezone(
+            datetime.timedelta(seconds=self.timezone))
+        local_time = datetime.datetime.fromtimestamp(
+            timestamp, tz=timezone_shift)
+        return local_time.strftime("%H:%M")
+
     def get_time(self, name):
         """Metodi, joka hakee säädatasta päivämäärän tai auringonnousun tai 
         auringonlaskun ajankohdan.
 
         Args:
-            name (str): toimii arvoilla "date", "sunrise_utc" ja "sunset_utc"
+            name (str): toimii arvoilla "date", "sunrise_utc", "sunset_utc",
+            "sunrise_local" ja "sunset_local"
 
         Returns:
-            Päivämäärä tai auringonnousun/-laskun aikaleima UTC-aikavyöhykkeellä.
+            Päivämäärä tai auringonnousun/-laskun aikaleima UTC-aikavyöhykkeellä
+            tai kellonaika paikallista aikaa.
         """
 
         date = datetime.datetime.fromtimestamp(self.timestamp)
         sunrise_utc = self.data["sys"]["sunrise"]
         sunset_utc = self.data["sys"]["sunset"]
+        sunrise_local = self.get_local_time(sunrise_utc)
+        sunset_local = self.get_local_time(sunset_utc)
 
         time_values = {"date": date,
                        "sunrise_utc": sunrise_utc,
-                       "sunset_utc": sunset_utc
+                       "sunset_utc": sunset_utc,
+                       "sunrise_local": sunrise_local,
+                       "sunset_local": sunset_local
                        }
         return time_values.get(name, None)
 
@@ -142,4 +166,4 @@ class Weatherdata:
                 start, end = values
                 if start <= degrees <= end:
                     return cardinal_direction
-        return None
+        return "unknown"
