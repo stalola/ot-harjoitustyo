@@ -12,7 +12,8 @@ class APIManipulation:
     """
 
     def user_input_city(self):
-        """Kysyy käyttäjältä kaupungin nimen ja muuttaa sen pienaakkosiksi.
+        """Metodi, joka kysyy käyttäjältä kaupungin nimen ja muuttaa sen 
+        pienaakkosiksi.
 
         Returns:
             Merkkijono, joka on käyttäjän antama kaupungin nimi pienaakkosina.
@@ -24,12 +25,28 @@ class APIManipulation:
         city = choice.lower()
         return city
 
+    def new_apikey(self):
+        """Metodi, joka lisää käyttäjän API-avaimen tiedostoon apikey.ini.
+
+        Jos tiedostoa apikey.ini ei ole, metodi luo uuden tiedoston.
+        Voit hankkia oman ilmaisen OpenWeather-palvelun API-avaimen osoitteesta 
+        https://home.openweathermap.org/users/sign_up
+        """
+        print("")
+        newapi = input("Type here the new api key (typing nothing will exit "
+                       "without changes): ")
+        if newapi == "":
+            sys.exit("API key was not changed, good bye")
+        with open("src/util/apikey.ini", "w", encoding="utf-8") as keyfile:
+            keyfile.write(f"[openweather]\napi_key={newapi}")
+        print(f"Avain {newapi} lisätty tiedostoon apikey.ini")
+
     def get_apikey(self):
         """Hakee API-avaimen tiedostosta apikey.ini.
 
         OpenWeather sääpalvelun APIssa vaadittu API-avain. 
-        Voit hankkia oman avaimen osoitteesta 
-        https://openweathermap.org/price (valitse Free subscription)
+        Voit hankkia oman ilmaisen avaimen osoitteesta 
+        https://home.openweathermap.org/users/sign_up
 
         Returns:
             Merkkijono: API-avain
