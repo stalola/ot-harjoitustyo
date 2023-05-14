@@ -2,3 +2,6 @@
 __pycache__
 .coverage
 htmlcov
+fogapp/src/ui/main_view.py
+fogapp/src/ui/converter.py
+fogapp/src/ui/ui.py
