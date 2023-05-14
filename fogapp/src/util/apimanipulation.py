@@ -30,7 +30,6 @@ class APIManipulation:
         Voit hankkia oman ilmaisen OpenWeather-palvelun API-avaimen osoitteesta 
         https://home.openweathermap.org/users/sign_up
         """
-        print("")
         newapi = input("Type here the new api key (typing nothing will exit "
                        "without changes): ")
         if newapi == "":
